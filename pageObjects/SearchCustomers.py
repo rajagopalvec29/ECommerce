@@ -1,23 +1,27 @@
-import time
-from selenium import webdriver
+from utilities.commonfuncs import commonactions
+
 
 
 class searchCustomer:
-    txtSearchemail_id = 'SearchEmail'
+    txtSearchemail_id = 'id:=SearchEmail'
     tableGrid_xpath  = '//table[@id="customers-grid"]'
     tablerow_xpath = "//table[@id='customers-grid']//tbody/tr"
     tablecolumn_xpath = "//table[@id='customers-grid']//tbody/tr/td"
-    btnsearch_id = 'search-customers'
+    btnsearch_id = 'id:=search-customers'
+
 
 
     def __init__(self,driver):
         self.driver = driver
+        self.commonobj = commonactions(self.driver)
 
     def serchbyemail(self,email):
-        self.driver.find_element_by_id(self.txtSearchemail_id).send_keys(email)
+        self.commonobj.enterText(self.txtSearchemail_id,email)
+        # self.driver.find_element_by_id(self.txtSearchemail_id).send_keys(email)
 
     def Clicksearchbtn(self):
-        self.driver.find_element_by_id(self.btnsearch_id).click()
+        self.commonobj.uiClick(self.btnsearch_id)
+        # self.driver.find_element_by_id(self.btnsearch_id).click()
 
     def Getemailtable(self):
         self.rows = len(self.driver.find_elements_by_xpath(self.tablerow_xpath))

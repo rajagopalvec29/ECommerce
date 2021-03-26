@@ -22,7 +22,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Ini" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebElemnts" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -42,7 +42,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in Test_DDTLogin.py">
+  <component name="RunManager" selected="Python tests.pytest in Test_Login.py">
     <configuration name="customLogger" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ECommerce" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,8 +96,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in Test_DDTLogin.py" />
         <item itemvalue="Python tests.pytest in Test_Login.py" />
+        <item itemvalue="Python tests.pytest in Test_DDTLogin.py" />
         <item itemvalue="Python.customLogger" />
       </list>
     </recent_temporary>
@@ -120,7 +120,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

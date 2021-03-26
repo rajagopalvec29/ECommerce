@@ -3,6 +3,7 @@ from utilities.customLogger import logGen
 from utilities import XLUtils
 import time
 import pytest
+import os
 
 
 
@@ -10,7 +11,7 @@ class Test_002_DDT_login:
     path = '.\\TestData\\LoginData.xlsx'
     logger = logGen.loggen()
 
-    @pytest.mark.regression
+
     def test_ddtlogin(self,Setup):
         self.logger.info("***Test_002_DDT_login***")
         self.rownum = XLUtils.getRowCount(self.path, 'Sheet1')
@@ -27,7 +28,8 @@ class Test_002_DDT_login:
             time.sleep(2)
             logouttext = self.driver.title
             if logouttext == 'Dashboard / nopCommerce administration':
-                self.driver.save_screenshot(".\\Screenshots\\" + "loginscreen" + str(a) + ".png")
+                os.makedirs("C:\\Users\Admin\PycharmProjects\ECommerce\Screenshots\\loginscreen"+str(a))
+                self.driver.save_screenshot(".\\Screenshots\\" + "loginscreen" + str(a) + "\\" + "home.png")
                 loginpage.Clicklogoff()
                 self.logger.info("***Login  Success***")
                 result = 'Pass'

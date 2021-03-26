@@ -5,8 +5,8 @@ import random
 import string
 
 class addCustomers:
-    customer_link = "(//li/a/span[text()='Customers'])[1]"
-    cus_sublink = "(//li/a/span[text()='Customers'])[2]"
+    customer_link = "(//li/a/p[contains(text(),'Customers')])[1]"
+    cus_sublink = "(//li/a/p[contains(text(),'Customers')])[2]"
     addnew_customer = "/html/body/div[3]/div[3]/div/form[1]/div[1]/div/a"
     email_id = "Email"
     password_id = "Password"
